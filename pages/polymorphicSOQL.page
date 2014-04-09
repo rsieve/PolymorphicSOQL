@@ -1,0 +1,18 @@
+<apex:page controller="ctrl_polymorphicSOQL" sidebar="false">
+	<apex:form id="theForm">
+		<apex:pageBlock title="Polymorphic SOQL">
+			<apex:pageBlockTable value="{!polytasks}" var="task">
+				<apex:column value="{!task.t.subject}"/>
+				<apex:column headervalue="Account Name" value="{!task.a.name}"/>
+				<apex:column headervalue="Account Number" value="{!task.a.AccountNumber}"/>
+				<apex:column headervalue="Opportunity Name" value="{!task.o.name}"/>
+				<apex:column headervalue="Opportunity Amount" value="{!task.o.amount}"/>
+				<apex:column headervalue="Opportunity Close Date" value="{!task.o.CloseDate}"/>
+				<apex:column headervalue="Case Number" value="{!task.c.casenumber}"/>
+				<apex:column headervalue="Case Subject" value="{!task.c.subject}"/>
+				<apex:column headervalue="Case Priority" value="{!task.c.priority}"/>
+				<apex:column headervalue="Other" value="{!task.recName}"/>
+			</apex:pageBlockTable>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>
